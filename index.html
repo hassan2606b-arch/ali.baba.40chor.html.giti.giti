@@ -3,65 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rolex | Timeless Precision</title>
+    <meta name="theme-color" content="#0a0c10" />
     <meta
       name="description"
-      content="Luxury Rolex watch landing page with premium styling and motion effects."
+      content="Luxury Swiss watches, Rolex-inspired collection, premium timepieces, designer watches, automatic watches, luxury mens watches, elegant Swiss watch brand."
     />
+    <meta
+      name="keywords"
+      content="Rolex, Rolex watch, Swiss luxury watch, luxury watches, automatic watch, men luxury watch, designer watches, Omega, Cartier, Patek Philippe, Audemars Piguet, Swiss Made watches, premium wristwatch, anniversary watch, chronograph watch, luxury timepieces, gold watch, elegant watch brand"
+    />
+    <meta name="robots" content="index, follow" />
+    <title>Rolex Inspired Luxury Watches | Premium Swiss Timepieces</title>
     <style>
       :root {
-        --bg: #080b10;
-        --bg-soft: #10161c;
-        --panel: rgba(18, 22, 26, 0.75);
-        --panel-strong: #121a21;
-        --gold: #d7b77d;
-        --gold-bright: #f3d08f;
-        --text: #eef5ff;
-        --muted: #a3b0be;
+        --bg: #070b10;
+        --bg-2: #101820;
+        --panel: rgba(18, 24, 32, 0.8);
+        --panel-soft: rgba(255, 255, 255, 0.03);
+        --gold-1: #f5d398;
+        --gold-2: #d3a75a;
+        --gold-3: #936d2d;
+        --text: #edf4ff;
+        --muted: #a6b4c4;
         --line: rgba(255, 255, 255, 0.08);
-        --shadow: rgba(0, 0, 0, 0.45);
+        --shadow: rgba(0, 0, 0, 0.5);
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
       body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
         background:
-          radial-gradient(circle at top left, rgba(215, 183, 125, 0.14), transparent 25%),
-          radial-gradient(circle at bottom right, rgba(73, 104, 128, 0.18), transparent 30%),
-          var(--bg);
+          radial-gradient(circle at top left, rgba(245, 211, 152, 0.16), transparent 23%),
+          radial-gradient(circle at bottom right, rgba(111, 146, 180, 0.18), transparent 26%),
+          linear-gradient(180deg, #04070b 0%, #0a0d12 44%, #0d1118 100%);
         color: var(--text);
         overflow-x: hidden;
       }
 
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+      img { max-width: 100%; display: block; }
+      a { color: inherit; text-decoration: none; }
+      ul, ol { list-style: none; padding: 0; margin: 0; }
 
       .container {
-        width: min(1180px, calc(100% - 32px));
+        width: min(1200px, calc(100% - 32px));
         margin: 0 auto;
       }
 
       .topbar {
         position: sticky;
         top: 0;
-        z-index: 20;
-        backdrop-filter: blur(14px);
-        background: rgba(8, 11, 16, 0.58);
+        z-index: 30;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        background: rgba(7, 11, 16, 0.6);
         border-bottom: 1px solid var(--line);
       }
 
@@ -69,77 +65,114 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        min-height: 78px;
+        min-height: 80px;
       }
 
       .brand {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         gap: 12px;
-        font-size: 1.2rem;
-        letter-spacing: 0.18em;
+        font-size: 1.15rem;
+        letter-spacing: 0.22em;
         text-transform: uppercase;
-        color: var(--gold-bright);
+        color: var(--gold-1);
+        font-weight: 700;
       }
 
       .brand-mark {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        width: 34px;
+        height: 34px;
         display: grid;
         place-items: center;
-        font-weight: 700;
-        background: linear-gradient(135deg, rgba(243, 208, 143, 0.2), rgba(215, 183, 125, 0.05));
+        border-radius: 50%;
+        background: linear-gradient(135deg, rgba(245, 211, 152, 0.22), rgba(147, 109, 45, 0.1));
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 0 20px rgba(245, 211, 152, 0.25);
       }
 
       .menu {
         display: flex;
         align-items: center;
         gap: 28px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
       }
 
       .menu a {
         color: var(--muted);
-        font-size: 0.86rem;
-        letter-spacing: 0.12em;
+        font-size: 0.77rem;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
         transition: color 0.25s ease;
       }
 
-      .menu a:hover {
-        color: var(--text);
-      }
+      .menu a:hover { color: var(--text); }
 
       .cta-btn {
-        border: 1px solid rgba(243, 208, 143, 0.4);
-        color: var(--gold-bright);
-        padding: 0.9rem 1.4rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-size: 0.74rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.88rem 1.55rem;
         border-radius: 999px;
-        background: rgba(215, 183, 125, 0.05);
+        border: 1px solid rgba(245, 211, 152, 0.24);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+        background: rgba(245, 211, 152, 0.05);
+        color: var(--gold-1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
         transition: transform 0.25s ease, box-shadow 0.25s ease;
       }
 
       .cta-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 16px 30px rgba(215, 183, 125, 0.18);
+        box-shadow: 0 20px 40px rgba(245, 211, 152, 0.12);
+      }
+
+      .primary {
+        background: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+        color: #151515;
+        border-color: transparent;
       }
 
       .hero {
         position: relative;
-        padding: 72px 0 40px;
+        min-height: 760px;
+        padding: 90px 0 48px;
+        overflow: hidden;
+      }
+
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(18px);
+        opacity: 0.8;
+      }
+
+      .hero::before {
+        width: 660px;
+        height: 660px;
+        background: radial-gradient(circle, rgba(243, 208, 143, 0.22), rgba(243, 208, 143, 0.02) 40%, transparent 70%);
+        left: -120px;
+        top: 30px;
+        animation: pulseGlow 6s ease-in-out infinite;
+      }
+
+      .hero::after {
+        width: 620px;
+        height: 620px;
+        background: radial-gradient(circle, rgba(122, 146, 176, 0.18), rgba(122, 146, 176, 0.02) 40%, transparent 72%);
+        right: -160px;
+        bottom: -60px;
+        animation: floatGlow 9s ease-in-out infinite alternate;
       }
 
       .hero-grid {
+        position: relative;
+        z-index: 1;
         display: grid;
-        grid-template-columns: 1.1fr 1fr;
-        gap: 34px;
+        grid-template-columns: 1.05fr 1fr;
+        gap: 36px;
         align-items: center;
       }
 
@@ -147,15 +180,14 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 18px;
         padding: 8px 14px;
         border-radius: 999px;
-        border: 1px solid rgba(243, 208, 143, 0.28);
+        border: 1px solid rgba(245, 211, 152, 0.25);
         background: rgba(255, 255, 255, 0.02);
-        color: var(--gold-bright);
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
+        color: var(--gold-1);
         font-size: 0.7rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
       }
 
       .eyebrow::before {
@@ -163,57 +195,48 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background: linear-gradient(135deg, var(--gold-bright), var(--gold));
-        box-shadow: 0 0 16px rgba(243, 208, 143, 0.8);
+        background: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+        box-shadow: 0 0 18px rgba(245, 211, 152, 0.8);
       }
 
       h1 {
-        margin: 0;
-        font-size: clamp(3rem, 5vw, 6rem);
+        margin: 20px 0 18px;
+        font-size: clamp(3.2rem, 5vw, 6.4rem);
         line-height: 0.92;
-        letter-spacing: -0.06em;
+        letter-spacing: -0.07em;
         font-weight: 700;
       }
 
       .highlight {
-        background: linear-gradient(135deg, #f8e7bd, #d7b77d, #96713e);
+        display: inline-block;
+        background: linear-gradient(135deg, #fff2c7, #f5d398, #cf9d54 70%, #f5d398 100%);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        text-shadow: 0 0 20px rgba(245, 211, 152, 0.18);
       }
 
       .hero-copy p {
+        max-width: 560px;
+        margin: 0;
         color: var(--muted);
-        max-width: 540px;
-        font-size: 1.08rem;
+        font-size: 1.1rem;
         line-height: 1.8;
-        margin: 20px 0 30px;
       }
 
       .hero-actions {
         display: flex;
         align-items: center;
-        gap: 16px;
         flex-wrap: wrap;
-      }
-
-      .primary {
-        background: linear-gradient(135deg, var(--gold-bright), var(--gold));
-        color: #111;
-        box-shadow: 0 18px 30px rgba(215, 183, 125, 0.25);
-      }
-
-      .secondary {
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.02);
-        color: var(--text);
+        gap: 16px;
+        margin-top: 30px;
       }
 
       .hero-stats {
         display: flex;
-        gap: 24px;
-        margin-top: 36px;
         flex-wrap: wrap;
+        gap: 28px;
+        margin-top: 38px;
       }
 
       .stat {
@@ -222,70 +245,74 @@
 
       .stat strong {
         display: block;
-        font-size: 1.5rem;
-        color: var(--gold-bright);
+        font-size: 1.75rem;
+        color: var(--gold-1);
+        letter-spacing: -0.05em;
       }
 
       .stat span {
         display: block;
-        margin-top: 6px;
+        margin-top: 8px;
         color: var(--muted);
-        font-size: 0.8rem;
-        letter-spacing: 0.12em;
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
       }
 
       .watch-scene {
         position: relative;
+        min-height: 640px;
         display: grid;
         place-items: center;
-        min-height: 640px;
       }
 
-      .glow-ring {
+      .glow-orbit {
         position: absolute;
-        width: 580px;
-        height: 580px;
+        width: 620px;
+        height: 620px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(215, 183, 125, 0.24), rgba(215, 183, 125, 0.06) 38%, transparent 68%);
-        filter: blur(14px);
-        animation: pulseGlow 4s ease-in-out infinite;
+        background: radial-gradient(circle, rgba(245, 211, 152, 0.24), rgba(245, 211, 152, 0.08) 32%, transparent 68%);
+        filter: blur(12px);
+        animation: pulseGlow 5.5s ease-in-out infinite;
       }
 
-      .watch-card {
+      .watch-stage {
         position: relative;
-        width: min(520px, 90%);
-        aspect-ratio: 1.2;
-        border-radius: 36px;
-        background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
-        border: 1px solid rgba(255,255,255,0.08);
-        box-shadow: 0 38px 80px var(--shadow);
-        transform: rotate(-10deg);
-        animation: floatY 5s ease-in-out infinite;
+        width: min(560px, 92%);
+        height: 520px;
+        display: grid;
+        place-items: center;
+        animation: floatCard 6s ease-in-out infinite;
       }
 
-      .watch-card::before {
+      .watch-stage::before {
         content: "";
         position: absolute;
-        inset: 22px;
-        border-radius: 24px;
-        background: linear-gradient(135deg, rgba(238, 245, 255, 0.06), rgba(12, 17, 22, 0.3));
-        border: 1px solid rgba(255,255,255,0.04);
+        inset: 50px 30px 38px 30px;
+        border-radius: 34px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: linear-gradient(145deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
+        transform: rotate(-10deg);
       }
 
-      .watch {
+      .watch-ring {
         position: absolute;
-        inset: 46px 86px 28px 86px;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
         display: grid;
         place-items: center;
+        animation: spinSlow 22s linear infinite;
       }
 
-      .watch-body {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        place-items: center;
+      .watch-ring::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 68%);
+        border: 1px solid rgba(255,255,255,0.06);
       }
 
       .watch-face {
@@ -293,13 +320,12 @@
         width: 330px;
         height: 330px;
         border-radius: 50%;
-        background: radial-gradient(circle at 35% 30%, #faf8f4 0%, #e7dad0 18%, #b8a08c 35%, #0f1116 100%);
-        border: 12px solid #d6c6b1;
+        background: radial-gradient(circle at 35% 30%, #fdfbf8 0%, #e8dfd6 16%, #bca788 34%, #0d1117 100%);
+        border: 12px solid #d8c8a5;
         box-shadow:
-          inset 0 0 0 12px rgba(35,38,42,0.7),
-          inset 0 0 0 18px rgba(255,255,255,0.1),
-          0 24px 40px rgba(0, 0, 0, 0.38);
-        animation: spinSlow 18s linear infinite;
+          inset 0 0 0 12px rgba(30, 33, 38, 0.78),
+          inset 0 0 0 20px rgba(255,255,255,0.08),
+          0 24px 40px rgba(0, 0, 0, 0.42);
       }
 
       .watch-face::before {
@@ -313,20 +339,26 @@
       .watch-face::after {
         content: "";
         position: absolute;
-        inset: 40px;
+        inset: 38px;
         border-radius: 50%;
-        border: 1px solid rgba(255,255,255,0.18);
+        border: 1px solid rgba(255,255,255,0.15);
+      }
+
+      .watch-markers {
+        position: absolute;
+        inset: 0;
       }
 
       .marker {
         position: absolute;
-        width: 4px;
-        height: 28px;
-        background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(146,121,92,0.8));
         left: 50%;
         top: 18px;
-        transform-origin: 50% 148px;
+        width: 4px;
+        height: 28px;
         border-radius: 999px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(146,121,92,0.8));
+        transform-origin: 50% 148px;
+        box-shadow: 0 0 8px rgba(255,255,255,0.15);
       }
 
       .marker:nth-child(1) { transform: translateX(-50%) rotate(0deg); }
@@ -344,11 +376,14 @@
 
       .center-cap {
         position: absolute;
+        left: 50%;
+        top: 50%;
         width: 18px;
         height: 18px;
-        background: radial-gradient(circle, #f5deae, #b08a4d);
         border-radius: 50%;
-        box-shadow: 0 0 0 4px rgba(17, 17, 17, 0.8);
+        background: radial-gradient(circle, #f5dd9b, #b98b44);
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 4px rgba(13, 17, 23, 0.8);
       }
 
       .hand {
@@ -359,68 +394,113 @@
         border-radius: 999px;
       }
 
+      .hour {
+        width: 8px;
+        height: 82px;
+        background: linear-gradient(180deg, #0d1014, #c89c4f 45%, #fcecc6 100%);
+        transform: translateX(-50%) rotate(120deg);
+      }
+
       .minute {
         width: 6px;
         height: 110px;
-        background: linear-gradient(180deg, #0d0d0f, #d9b16c 45%, #f0dca7 100%);
+        background: linear-gradient(180deg, #0d1014, #d9b06c 42%, #f0ddad 100%);
         transform: translateX(-50%) rotate(65deg);
-      }
-
-      .hour {
-        width: 8px;
-        height: 80px;
-        background: linear-gradient(180deg, #0d0d0f, #c7964e 50%, #f9df9d 100%);
-        transform: translateX(-50%) rotate(120deg);
       }
 
       .second {
         width: 2px;
-        height: 125px;
-        background: linear-gradient(180deg, #e4bb68, #f7ebc9);
+        height: 126px;
+        background: linear-gradient(180deg, #f0c56e, #f9ecce);
         transform: translateX(-50%) rotate(180deg);
       }
-
-      .watch-lugs {
-        position: absolute;
-        width: 110px;
-        height: 24px;
-        border-radius: 12px;
-        background: linear-gradient(180deg, rgba(201,170,120,0.75), rgba(112,87,41,0.9));
-        border: 1px solid rgba(255,255,255,0.12);
-        box-shadow: inset 0 0 12px rgba(255,255,255,0.12);
-      }
-
-      .lugs-left { left: 30px; top: 50%; transform: translateY(-50%) rotate(-22deg); }
-      .lugs-right { right: 30px; top: 50%; transform: translateY(-50%) rotate(22deg); }
 
       .strap {
         position: absolute;
         width: 170px;
         height: 220px;
-        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(12,17,22,0.6)),
-                    linear-gradient(90deg, #202932, #0f151b);
+        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(12,17,22,0.6)), linear-gradient(90deg, #202932, #0d141a);
         border: 1px solid rgba(255,255,255,0.08);
+        z-index: -1;
       }
 
       .strap.top {
-        top: -12px;
+        top: 0;
         left: 50%;
         transform: translateX(-50%);
-        border-radius: 32px 32px 18px 18px;
+        border-radius: 30px 30px 16px 16px;
       }
 
       .strap.bottom {
-        bottom: -12px;
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        border-radius: 18px 18px 32px 32px;
+        border-radius: 16px 16px 30px 30px;
       }
 
-      .product-row {
-        padding: 52px 0 30px;
+      .lugs {
+        position: absolute;
+        width: 110px;
+        height: 26px;
+        border-radius: 14px;
+        background: linear-gradient(180deg, rgba(201,170,120,0.8), rgba(112,87,41,0.96));
+        border: 1px solid rgba(255,255,255,0.12);
+        box-shadow: inset 0 0 12px rgba(255,255,255,0.14);
       }
 
-      .section-header {
+      .lugs-left { left: 24px; top: 50%; transform: translateY(-50%) rotate(-20deg); }
+      .lugs-right { right: 24px; top: 50%; transform: translateY(-50%) rotate(20deg); }
+
+      .floating-tag {
+        position: absolute;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(245, 211, 152, 0.18);
+        background: rgba(14, 17, 22, 0.76);
+        color: var(--gold-1);
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        box-shadow: 0 18px 35px rgba(0, 0, 0, 0.28);
+        animation: drift 8s ease-in-out infinite;
+      }
+
+      .tag-1 { top: 45px; left: 48px; }
+      .tag-2 { top: 110px; right: 24px; animation-delay: 1.5s; }
+      .tag-3 { bottom: 76px; left: 66px; animation-delay: 2.5s; }
+      .tag-4 { bottom: 32px; right: 72px; animation-delay: 3.2s; }
+
+      .marquee {
+        position: relative;
+        overflow: hidden;
+        margin-top: 18px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: rgba(255,255,255,0.01);
+      }
+
+      .marquee-track {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        white-space: nowrap;
+        min-width: max-content;
+        padding: 18px 0;
+        animation: scrollText 24s linear infinite;
+      }
+
+      .marquee-item {
+        color: var(--muted);
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+      }
+
+      .section {
+        padding: 90px 0 28px;
+      }
+
+      .section-head {
         display: flex;
         justify-content: space-between;
         align-items: end;
@@ -428,16 +508,17 @@
         margin-bottom: 28px;
       }
 
-      .section-header h2 {
+      .section-head h2 {
         margin: 0;
-        font-size: clamp(2rem, 3vw, 3rem);
+        font-size: clamp(2.2rem, 3vw, 3rem);
         letter-spacing: -0.05em;
       }
 
-      .section-header p {
+      .section-head p {
         margin: 0;
+        max-width: 500px;
         color: var(--muted);
-        max-width: 480px;
+        line-height: 1.7;
       }
 
       .cards {
@@ -448,95 +529,89 @@
 
       .card {
         position: relative;
-        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-        border: 1px solid var(--line);
+        padding: 24px 22px 20px;
         border-radius: 28px;
-        padding: 22px;
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
         overflow: hidden;
-        transition: transform 0.3s ease, border-color 0.3s ease;
+        transition: transform 0.25s ease, border-color 0.25s ease;
       }
 
       .card:hover {
         transform: translateY(-8px);
-        border-color: rgba(215, 183, 125, 0.5);
+        border-color: rgba(245, 211, 152, 0.42);
       }
 
-      .card-glow {
+      .card::before {
+        content: "";
         position: absolute;
-        inset: -30% -10% auto auto;
-        width: 160px;
-        height: 160px;
-        background: radial-gradient(circle, rgba(215, 183, 125, 0.18), transparent 65%);
+        top: -25%;
+        right: -30%;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(245,211,152,0.18), transparent 70%);
       }
 
       .tag {
+        position: relative;
         display: inline-block;
-        padding: 7px 12px;
+        padding: 8px 12px;
         border-radius: 999px;
-        background: rgba(215, 183, 125, 0.08);
-        border: 1px solid rgba(243, 208, 143, 0.22);
-        color: var(--gold-bright);
-        font-size: 0.7rem;
-        letter-spacing: 0.12em;
+        background: rgba(245,211,152,0.08);
+        border: 1px solid rgba(245,211,152,0.2);
+        color: var(--gold-1);
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
       }
 
-      .watch-mini {
+      .mini-watch {
         position: relative;
-        height: 210px;
-        margin: 18px 0 12px;
+        height: 220px;
+        margin: 18px 0 8px;
+        display: grid;
+        place-items: center;
       }
 
-      .watch-mini .watch-face {
+      .mini-watch .watch-face {
         width: 180px;
         height: 180px;
         border-width: 8px;
-        transform: scale(0.9);
       }
 
-      .watch-mini .hand.minute {
-        height: 70px;
-      }
-
-      .watch-mini .hand.hour {
-        height: 55px;
-      }
-
-      .watch-mini .hand.second {
-        height: 78px;
-      }
-
-      .watch-mini .marker {
-        transform-origin: 50% 82px;
-      }
+      .mini-watch .marker { transform-origin: 50% 82px; }
+      .mini-watch .hour { height: 52px; }
+      .mini-watch .minute { height: 68px; }
+      .mini-watch .second { height: 78px; }
 
       .card h3 {
+        position: relative;
         margin: 0 0 8px;
-        font-size: 1.55rem;
+        font-size: 1.5rem;
         letter-spacing: -0.04em;
       }
 
       .card p {
+        position: relative;
         margin: 0;
         color: var(--muted);
         line-height: 1.7;
       }
 
       .card-footer {
-        margin-top: 18px;
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 14px;
+        margin-top: 18px;
       }
 
       .price {
+        color: var(--gold-1);
         font-size: 1.2rem;
         font-weight: 700;
-        color: var(--gold-bright);
-      }
-
-      .perf {
-        padding: 76px 0 40px;
       }
 
       .feature-grid {
@@ -547,9 +622,10 @@
       }
 
       .feature-panel {
-        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+        position: relative;
+        border-radius: 30px;
         border: 1px solid var(--line);
-        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
         overflow: hidden;
       }
 
@@ -559,37 +635,34 @@
 
       .feature-list h3 {
         margin: 0 0 22px;
-        font-size: clamp(1.8rem, 2vw, 2.5rem);
+        font-size: clamp(2rem, 2.2vw, 2.8rem);
         letter-spacing: -0.05em;
       }
 
       .feature-item {
         display: flex;
+        align-items: flex-start;
         gap: 16px;
-        align-items: start;
         padding: 18px 0;
         border-bottom: 1px solid var(--line);
       }
 
-      .feature-item:last-child {
-        border-bottom: none;
-      }
+      .feature-item:last-child { border-bottom: none; }
 
       .feature-icon {
         width: 44px;
         height: 44px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, rgba(243,208,143,0.16), rgba(215,183,125,0.05));
-        border: 1px solid rgba(243,208,143,0.28);
         display: grid;
         place-items: center;
-        font-size: 1.2rem;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(245,211,152,0.12), rgba(245,211,152,0.04));
+        border: 1px solid rgba(245, 211, 152, 0.2);
       }
 
       .feature-item strong {
         display: block;
         margin-bottom: 6px;
-        letter-spacing: -0.03em;
+        font-size: 1.1rem;
       }
 
       .feature-item p {
@@ -599,28 +672,29 @@
       }
 
       .showcase {
-        position: relative;
-        min-height: 100%;
-        background: linear-gradient(135deg, rgba(243,208,143,0.1), rgba(255,255,255,0.02));
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: 100%;
+        background: linear-gradient(135deg, rgba(245,211,152,0.08), rgba(255,255,255,0.02));
       }
 
       .showcase::before {
         content: "";
         position: absolute;
-        width: 440px;
-        height: 440px;
+        width: 420px;
+        height: 420px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(215,183,125,0.2), transparent 65%);
+        background: radial-gradient(circle, rgba(245,211,152,0.22), transparent 68%);
       }
 
       .showcase-watch {
         position: relative;
-        width: 400px;
-        height: 400px;
-        animation: floatY 6s ease-in-out infinite reverse;
+        width: 360px;
+        height: 360px;
+        display: grid;
+        place-items: center;
+        animation: floatCard 7s ease-in-out infinite reverse;
       }
 
       .showcase-watch .watch-face {
@@ -629,28 +703,21 @@
         border-width: 10px;
       }
 
-      .showcase-watch .watch-face .marker {
-        transform-origin: 50% 120px;
-      }
-
-      .cta-banner {
-        padding: 42px 0 88px;
-      }
-
       .banner {
+        margin-top: 30px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         gap: 18px;
-        padding: 34px 36px;
+        padding: 30px 32px;
         border-radius: 28px;
-        background: linear-gradient(135deg, rgba(215,183,125,0.1), rgba(255,255,255,0.02));
-        border: 1px solid rgba(243,208,143,0.2);
+        border: 1px solid rgba(245, 211, 152, 0.18);
+        background: linear-gradient(135deg, rgba(245,211,152,0.08), rgba(255,255,255,0.02));
       }
 
       .banner h3 {
         margin: 0 0 8px;
-        font-size: clamp(1.8rem, 2.5vw, 3rem);
+        font-size: clamp(2rem, 2.4vw, 3rem);
         letter-spacing: -0.05em;
       }
 
@@ -660,22 +727,37 @@
       }
 
       .footer {
-        padding: 0 0 40px;
-        color: var(--muted);
+        padding: 30px 0 40px;
         text-align: center;
-        font-size: 0.8rem;
-        letter-spacing: 0.12em;
+        color: var(--muted);
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
         text-transform: uppercase;
-      }
-
-      @keyframes floatY {
-        0%, 100% { transform: translateY(0px) rotate(-10deg); }
-        50% { transform: translateY(-18px) rotate(-8deg); }
       }
 
       @keyframes pulseGlow {
         0%, 100% { transform: scale(0.96); opacity: 0.7; }
         50% { transform: scale(1.08); opacity: 1; }
+      }
+
+      @keyframes floatGlow {
+        0% { transform: translate(-10px, 8px) scale(0.94); }
+        100% { transform: translate(18px, -12px) scale(1.04); }
+      }
+
+      @keyframes floatCard {
+        0%, 100% { transform: translateY(0px) rotate(-8deg); }
+        50% { transform: translateY(-20px) rotate(-4deg); }
+      }
+
+      @keyframes scrollText {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      @keyframes drift {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-14px); }
       }
 
       @keyframes spinSlow {
@@ -690,15 +772,9 @@
           grid-template-columns: 1fr;
         }
 
-        .watch-scene {
-          min-height: 460px;
-        }
+        .menu { display: none; }
 
-        .menu {
-          display: none;
-        }
-
-        .section-header,
+        .section-head,
         .banner {
           flex-direction: column;
           align-items: flex-start;
@@ -706,36 +782,18 @@
       }
 
       @media (max-width: 560px) {
-        .nav {
-          justify-content: center;
-          gap: 16px;
-          padding: 12px 0;
-        }
-
-        .brand {
-          letter-spacing: 0.1em;
-          font-size: 1rem;
-        }
-
-        .hero {
-          padding-top: 40px;
-        }
-
-        .watch-card {
-          width: min(420px, 92%);
-        }
-
-        .watch-face {
-          width: 250px;
-          height: 250px;
-        }
+        .nav { justify-content: center; }
+        .cta-btn { padding: 0.82rem 1.15rem; }
+        .brand { letter-spacing: 0.12em; }
+        .watch-stage { height: 460px; }
+        .watch-face { width: 250px; height: 250px; }
       }
     </style>
   </head>
   <body>
     <header class="topbar">
       <div class="container nav">
-        <div class="brand" aria-label="Rolex Home">
+        <div class="brand" aria-label="Luxury watch brand">
           <span class="brand-mark">R</span>
           <span>Rolex</span>
         </div>
@@ -744,7 +802,7 @@
           <ul class="menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#collections">Collections</a></li>
-            <li><a href="#craft">Craftsmanship</a></li>
+            <li><a href="#craft">Craft</a></li>
             <li><a href="#journal">Journal</a></li>
           </ul>
         </nav>
@@ -763,16 +821,17 @@
               <span class="highlight">the extraordinary.</span>
             </h1>
             <p>
-              Discover timepieces engineered with precision, built with iconic design,
-              and designed to accompany every defining moment in life.
+              Discover luxury Swiss timepieces inspired by Rolex, Omega, Cartier, Patek Philippe,
+              and iconic watchmakers. Crafted for collectors, professionals, and those who value
+              enduring elegance, precision, and timeless presence.
             </p>
 
             <div class="hero-actions">
               <a href="#collections" class="cta-btn primary">Explore Watches</a>
-              <a href="#craft" class="cta-btn secondary">Our Heritage</a>
+              <a href="#craft" class="cta-btn">Our Heritage</a>
             </div>
 
-            <div class="hero-stats" aria-label="Brand metrics">
+            <div class="hero-stats" aria-label="Watch brand stats">
               <div class="stat">
                 <strong>120+</strong>
                 <span>Years</span>
@@ -788,16 +847,23 @@
             </div>
           </div>
 
-          <div class="watch-scene" aria-label="Luxury Rolex watch illustration">
-            <div class="glow-ring"></div>
-            <div class="watch-card">
+          <div class="watch-scene" aria-label="Luxury watch showcase">
+            <div class="glow-orbit"></div>
+
+            <div class="watch-stage">
+              <div class="floating-tag tag-1">Swiss Made</div>
+              <div class="floating-tag tag-2">Waterproof</div>
+              <div class="floating-tag tag-3">Chronograph</div>
+              <div class="floating-tag tag-4">Gold</div>
+
               <div class="strap top"></div>
               <div class="strap bottom"></div>
-              <div class="watch-lugs lugs-left"></div>
-              <div class="watch-lugs lugs-right"></div>
-              <div class="watch">
-                <div class="watch-body">
-                  <div class="watch-face" aria-label="Rolex face">
+              <div class="lugs lugs-left"></div>
+              <div class="lugs lugs-right"></div>
+
+              <div class="watch-ring">
+                <div class="watch-face" aria-label="Luxury watch face">
+                  <div class="watch-markers">
                     <span class="marker"></span>
                     <span class="marker"></span>
                     <span class="marker"></span>
@@ -810,11 +876,11 @@
                     <span class="marker"></span>
                     <span class="marker"></span>
                     <span class="marker"></span>
-                    <span class="hand hour"></span>
-                    <span class="hand minute"></span>
-                    <span class="hand second"></span>
-                    <span class="center-cap"></span>
                   </div>
+                  <span class="hand hour"></span>
+                  <span class="hand minute"></span>
+                  <span class="hand second"></span>
+                  <span class="center-cap"></span>
                 </div>
               </div>
             </div>
@@ -822,34 +888,54 @@
         </div>
       </section>
 
-      <section class="product-row" id="collections">
+      <div class="marquee" aria-label="Luxury brands ticker">
+        <div class="marquee-track">
+          <span class="marquee-item">Rolex</span>
+          <span class="marquee-item">Omega</span>
+          <span class="marquee-item">Cartier</span>
+          <span class="marquee-item">Patek Philippe</span>
+          <span class="marquee-item">Audemars Piguet</span>
+          <span class="marquee-item">Swiss Watch</span>
+          <span class="marquee-item">Luxury Timepieces</span>
+          <span class="marquee-item">Rolex</span>
+          <span class="marquee-item">Omega</span>
+          <span class="marquee-item">Cartier</span>
+          <span class="marquee-item">Patek Philippe</span>
+          <span class="marquee-item">Audemars Piguet</span>
+          <span class="marquee-item">Swiss Watch</span>
+          <span class="marquee-item">Luxury Timepieces</span>
+        </div>
+      </div>
+
+      <section class="section" id="collections">
         <div class="container">
-          <div class="section-header">
+          <div class="section-head">
             <h2>Featured signatures</h2>
             <p>
-              A refined selection of iconic timepieces, each blending performance,
-              elegance, and an unmistakable presence.
+              Iconic Rolex-inspired models and premium Swiss luxury watches designed for rare moments,
+              formal elegance, and uncompromising craftsmanship.
             </p>
           </div>
 
           <div class="cards">
             <article class="card">
-              <div class="card-glow"></div>
               <span class="tag">Submariner</span>
-              <div class="watch-mini" aria-hidden="true">
+              <div class="mini-watch" aria-hidden="true">
                 <div class="watch-face">
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
+                  <div class="watch-markers">
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                  </div>
                   <span class="hand hour"></span>
                   <span class="hand minute"></span>
                   <span class="hand second"></span>
@@ -857,30 +943,31 @@
                 </div>
               </div>
               <h3>Submariner</h3>
-              <p>Robust and legendary, crafted for adventure while preserving perfect elegance.</p>
+              <p>Built for exploration, performance, and bold elegance in every pursuit.</p>
               <div class="card-footer">
                 <span class="price">$9,400</span>
-                <a class="cta-btn secondary" href="#">Details</a>
+                <a class="cta-btn" href="#">Details</a>
               </div>
             </article>
 
             <article class="card">
-              <div class="card-glow"></div>
               <span class="tag">Day-Date</span>
-              <div class="watch-mini" aria-hidden="true">
+              <div class="mini-watch" aria-hidden="true">
                 <div class="watch-face">
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
+                  <div class="watch-markers">
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                  </div>
                   <span class="hand hour"></span>
                   <span class="hand minute"></span>
                   <span class="hand second"></span>
@@ -888,30 +975,31 @@
                 </div>
               </div>
               <h3>Day-Date</h3>
-              <p>Prestige reimagined with a distinguished dial and enduring, polished presence.</p>
+              <p>Prestige, precision, and signature presence for unforgettable milestones.</p>
               <div class="card-footer">
                 <span class="price">$23,800</span>
-                <a class="cta-btn secondary" href="#">Details</a>
+                <a class="cta-btn" href="#">Details</a>
               </div>
             </article>
 
             <article class="card">
-              <div class="card-glow"></div>
               <span class="tag">Datejust</span>
-              <div class="watch-mini" aria-hidden="true">
+              <div class="mini-watch" aria-hidden="true">
                 <div class="watch-face">
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
-                  <span class="marker"></span>
+                  <div class="watch-markers">
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                    <span class="marker"></span>
+                  </div>
                   <span class="hand hour"></span>
                   <span class="hand minute"></span>
                   <span class="hand second"></span>
@@ -919,17 +1007,17 @@
                 </div>
               </div>
               <h3>Datejust</h3>
-              <p>Timeless by design, refined for every occasion with flawless horological precision.</p>
+              <p>Timeless styling with refined details made for modern luxury lifestyles.</p>
               <div class="card-footer">
                 <span class="price">$12,900</span>
-                <a class="cta-btn secondary" href="#">Details</a>
+                <a class="cta-btn" href="#">Details</a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="perf" id="craft">
+      <section class="section" id="craft">
         <div class="container feature-grid">
           <div class="feature-panel">
             <div class="feature-list">
@@ -939,7 +1027,7 @@
                 <div class="feature-icon">✦</div>
                 <div>
                   <strong>Swiss Made precision</strong>
-                  <p>Every Rolex movement is tested to exacting standards for unmatched reliability and performance.</p>
+                  <p>Every movement is built to exacting standards for unwavering reliability.</p>
                 </div>
               </div>
 
@@ -947,7 +1035,7 @@
                 <div class="feature-icon">◌</div>
                 <div>
                   <strong>Exceptional materials</strong>
-                  <p>From Oystersteel to 18 ct gold, each material is selected for endurance and beauty.</p>
+                  <p>Oystersteel, gold, sapphire crystal, and premium finishing for lasting beauty.</p>
                 </div>
               </div>
 
@@ -955,27 +1043,29 @@
                 <div class="feature-icon">⚙</div>
                 <div>
                   <strong>Uncompromising finish</strong>
-                  <p>Meticulous polishing, brushed surfaces, and careful detailing give every watch its signature presence.</p>
+                  <p>Inspect every dial, bezel, and case to reveal signature luxury appeal.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="feature-panel showcase" id="journal">
-            <div class="showcase-watch" aria-label="Showcase watch">
+            <div class="showcase-watch" aria-label="Luxury watch display">
               <div class="watch-face">
-                <span class="marker"></span>
-                <span class="marker"></span>
-                <span class="marker"></span>
-                <span class="marker"></span>
-                <span class="marker"></span>
-                <span class="marker"></span>
-                <span class="marker"></span>
-                <span class="marker"></span>
-                <span class="marker"></span>
-                <span class="marker"></span>
-                <span class="marker"></span>
-                <span class="marker"></span>
+                <div class="watch-markers">
+                  <span class="marker"></span>
+                  <span class="marker"></span>
+                  <span class="marker"></span>
+                  <span class="marker"></span>
+                  <span class="marker"></span>
+                  <span class="marker"></span>
+                  <span class="marker"></span>
+                  <span class="marker"></span>
+                  <span class="marker"></span>
+                  <span class="marker"></span>
+                  <span class="marker"></span>
+                  <span class="marker"></span>
+                </div>
                 <span class="hand hour"></span>
                 <span class="hand minute"></span>
                 <span class="hand second"></span>
@@ -986,37 +1076,17 @@
         </div>
       </section>
 
-      <section class="cta-banner">
-        <div class="container">
-          <div class="banner">
-            <div>
-              <h3>Own your next moment.</h3>
-              <p>Schedule a private consultation and discover the watch that fits your story.</p>
-            </div>
-            <a href="#home" class="cta-btn primary">Request a Call</a>
+      <section class="container">
+        <div class="banner">
+          <div>
+            <h3>Own your next moment.</h3>
+            <p>Schedule a private consultation and experience the watch that fits your story.</p>
           </div>
+          <a href="#home" class="cta-btn primary">Request a Call</a>
         </div>
       </section>
     </main>
 
-    <footer class="footer">Rolex • Timeless precision</footer>
-
-    <script>
-      document.addEventListener('pointermove', (event) => {
-        const x = (event.clientX / window.innerWidth - 0.5) * 12;
-        const y = (event.clientY / window.innerHeight - 0.5) * 12;
-
-        const watchCards = document.querySelectorAll('.watch-card, .showcase-watch');
-        watchCards.forEach((card) => {
-          card.style.transform = `rotate(${x * 0.5}deg) translateY(${y * -0.25}px)`;
-        });
-      });
-
-      document.addEventListener('pointerleave', () => {
-        document.querySelectorAll('.watch-card, .showcase-watch').forEach((card) => {
-          card.style.transform = '';
-        });
-      });
-    </script>
+    <footer class="footer">Luxury Swiss Watches • Rolex Inspired • Executive Timepieces</footer>
   </body>
 </html>
