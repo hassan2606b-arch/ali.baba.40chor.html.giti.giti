@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rolex 3D Watch Animation</title>
+    <title>Rolex 3D Luxury Watch</title>
     <style>
       :root {
-        --bg: #060a10;
-        --bg-2: #0d1320;
-        --navy: #0f1723;
-        --gold-1: #f7df9d;
-        --gold-2: #d6a95c;
-        --gold-3: #866126;
-        --silver-1: #e8edf8;
-        --silver-2: #9aa7bb;
+        --bg-1: #04070b;
+        --bg-2: #0a0d12;
+        --bg-3: #0d1118;
+        --gold-1: #f7dfa3;
+        --gold-2: #d5ad63;
+        --gold-3: #9b7030;
+        --gold-4: #724d1d;
+        --silver-1: #edf2fb;
+        --silver-2: #a4afc1;
         --text: #edf4ff;
-        --muted: #a7b5c8;
+        --muted: #a9b6c8;
         --line: rgba(255,255,255,0.08);
       }
 
@@ -26,9 +27,9 @@
         min-height: 100%;
         font-family: Arial, Helvetica, sans-serif;
         background:
-          radial-gradient(circle at 20% 15%, rgba(247,223,157,0.18), transparent 18%),
-          radial-gradient(circle at 80% 80%, rgba(105,146,196,0.18), transparent 20%),
-          linear-gradient(180deg, #04070b 0%, #0a0d13 45%, #0d1219 100%);
+          radial-gradient(circle at 18% 18%, rgba(247,223,163,0.18), transparent 18%),
+          radial-gradient(circle at 80% 76%, rgba(109,146,188,0.17), transparent 20%),
+          linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 42%, var(--bg-3) 100%);
         color: var(--text);
       }
 
@@ -40,12 +41,13 @@
 
       .scene {
         position: relative;
-        width: min(100%, 1200px);
+        width: min(100%, 1400px);
         height: 100vh;
         min-height: 760px;
-        overflow: hidden;
         display: grid;
         place-items: center;
+        background: transparent;
+        overflow: hidden;
       }
 
       .scene::before,
@@ -53,35 +55,43 @@
         content: "";
         position: absolute;
         border-radius: 50%;
-        filter: blur(30px);
+        filter: blur(42px);
       }
 
       .scene::before {
-        width: 600px;
-        height: 600px;
-        left: -140px;
-        top: -60px;
-        background: radial-gradient(circle, rgba(247,223,157,0.22), transparent 65%);
-        animation: pulse 6s ease-in-out infinite;
+        width: 720px;
+        height: 720px;
+        left: -200px;
+        top: -100px;
+        background: radial-gradient(circle, rgba(247,223,163,0.22), rgba(247,223,163,0.06) 35%, transparent 70%);
+        animation: pulse 10s ease-in-out infinite;
       }
 
       .scene::after {
-        width: 700px;
-        height: 700px;
-        right: -200px;
-        bottom: -150px;
-        background: radial-gradient(circle, rgba(116,154,201,0.18), transparent 65%);
-        animation: pulse 8s ease-in-out infinite reverse;
+        width: 820px;
+        height: 820px;
+        right: -260px;
+        bottom: -250px;
+        background: radial-gradient(circle, rgba(98,128,170,0.18), rgba(98,128,170,0.06) 35%, transparent 72%);
+        animation: pulse 12s ease-in-out infinite reverse;
       }
 
-      .watch-wrap {
+      .watch-stage {
         position: relative;
-        width: min(90vw, 850px);
-        height: min(78vh, 760px);
+        width: min(90vw, 980px);
+        height: min(82vh, 840px);
         display: grid;
         place-items: center;
-        perspective: 1800px;
-        transform-style: preserve-3d;
+        perspective: 2200px;
+      }
+
+      .watch-stage::before {
+        content: "";
+        position: absolute;
+        width: 640px;
+        height: 640px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,255,255,0.02), transparent 68%);
       }
 
       .brand {
@@ -89,70 +99,91 @@
         top: 7%;
         left: 50%;
         transform: translateX(-50%);
-        text-transform: uppercase;
         letter-spacing: 1.2rem;
-        font-size: 0.78rem;
-        color: rgba(247,223,157,0.9);
-        text-shadow: 0 0 18px rgba(247,223,157,0.5);
-        z-index: 20;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: rgba(247,223,163,0.9);
+        text-shadow: 0 0 18px rgba(247,223,163,0.52);
+        z-index: 30;
       }
+
+      .float-tag {
+        position: absolute;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(247,223,163,0.18);
+        background: rgba(10,13,18,0.72);
+        color: var(--gold-1);
+        font-size: 0.66rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        box-shadow: 0 18px 30px rgba(0,0,0,0.2);
+        animation: drift 7s ease-in-out infinite;
+      }
+
+      .tag-1 { top: 12%; left: 12%; }
+      .tag-2 { top: 20%; right: 12%; animation-delay: 1.2s; }
+      .tag-3 { bottom: 18%; left: 18%; animation-delay: 2.2s; }
+      .tag-4 { bottom: 10%; right: 18%; animation-delay: 3.1s; }
 
       .watch {
         position: relative;
-        width: 520px;
-        height: 520px;
+        width: 620px;
+        height: 620px;
         transform-style: preserve-3d;
-        animation: floatWatch 8s ease-in-out infinite;
+        animation: floatWatch 9s ease-in-out infinite;
       }
 
       .watch-shell {
         position: absolute;
         inset: 0;
         transform-style: preserve-3d;
-        transform: rotateX(62deg) rotateY(-24deg) rotateZ(-8deg);
+        transform: rotateX(67deg) rotateY(-26deg) rotateZ(-8deg) translateZ(20px);
       }
 
-      .watch-band {
+      .band {
         position: absolute;
         left: 50%;
-        width: 180px;
-        height: 235px;
+        width: 175px;
+        height: 260px;
         transform: translateX(-50%);
-        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(8,12,17,0.8));
+        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(9,14,20,0.8));
         border: 1px solid rgba(255,255,255,0.08);
-        box-shadow: inset 0 0 18px rgba(255,255,255,0.06), 0 30px 50px rgba(0,0,0,0.35);
+        box-shadow: inset 0 0 18px rgba(255,255,255,0.06), 0 28px 60px rgba(0,0,0,0.35);
       }
 
-      .watch-band.top {
-        top: -8px;
-        border-radius: 34px 34px 18px 18px;
-      }
-
-      .watch-band.bottom {
-        bottom: -8px;
-        border-radius: 18px 18px 34px 34px;
-      }
-
-      .watch-band::before {
+      .band::before {
         content: "";
         position: absolute;
-        inset: 16px 20px;
-        border-radius: 20px;
-        background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(12,18,25,0.8));
+        inset: 18px 18px;
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(12,17,22,0.82));
+      }
+
+      .band.top {
+        top: -8px;
+        border-radius: 38px 38px 18px 18px;
+      }
+
+      .band.bottom {
+        bottom: -8px;
+        border-radius: 18px 18px 38px 38px;
       }
 
       .watch-case {
         position: absolute;
-        inset: 70px 58px;
+        inset: 86px 72px;
         display: grid;
         place-items: center;
         border-radius: 50%;
-        background: linear-gradient(135deg, rgba(247,223,157,0.7), rgba(157,120,60,0.88), rgba(40,45,54,0.94));
-        border: 12px solid rgba(228,200,143,0.92);
+        background: linear-gradient(135deg, rgba(247,223,163,0.8), rgba(183,144,74,0.87), rgba(24,30,35,0.96));
+        border: 14px solid rgba(228,198,136,0.92);
         box-shadow:
-          inset 0 0 0 6px rgba(17,21,28,0.85),
+          inset 0 0 0 8px rgba(11,15,20,0.88),
           inset 0 0 0 18px rgba(255,255,255,0.12),
-          0 30px 50px rgba(0,0,0,0.38);
+          0 28px 50px rgba(0,0,0,0.44),
+          0 0 40px rgba(247,223,163,0.12);
         transform: translateZ(28px);
         overflow: hidden;
       }
@@ -160,64 +191,64 @@
       .watch-case::before {
         content: "";
         position: absolute;
-        inset: 12px;
+        inset: 8px;
         border-radius: 50%;
-        border: 2px solid rgba(255,255,255,0.18);
+        border: 2px solid rgba(255,255,255,0.16);
       }
 
       .watch-case::after {
         content: "";
         position: absolute;
-        inset: 30px;
+        inset: 24px;
         border-radius: 50%;
-        border: 1px solid rgba(255,255,255,0.14);
+        border: 1px solid rgba(255,255,255,0.12);
       }
 
       .bezel-ring {
         position: absolute;
-        inset: 22px;
+        inset: 16px;
         border-radius: 50%;
-        background: radial-gradient(circle at 30% 18%, rgba(255,255,255,0.65), rgba(213,177,111,0.18) 24%, rgba(0,0,0,0.2) 58%, rgba(8,10,16,0.85));
-        border: 1px solid rgba(255,255,255,0.16);
-        box-shadow: inset 0 0 25px rgba(255,255,255,0.08), inset 0 0 40px rgba(0,0,0,0.32);
+        background: radial-gradient(circle at 35% 24%, rgba(255,255,255,0.76), rgba(212,176,110,0.2) 26%, rgba(12,15,20,0.16) 58%, rgba(4,7,12,0.9));
+        border: 1px solid rgba(255,255,255,0.18);
+        box-shadow: inset 0 0 26px rgba(255,255,255,0.12), inset 0 0 34px rgba(0,0,0,0.34);
       }
 
-      .watch-face {
+      .dial {
         position: absolute;
         width: 78%;
         height: 78%;
         border-radius: 50%;
         background:
-          radial-gradient(circle at 35% 30%, rgba(255,255,255,0.9), rgba(236,230,217,0.8) 12%, rgba(193,170,136,0.7) 25%, rgba(15,20,28,0.96) 68%, rgba(2,5,8,1) 100%);
-        box-shadow: inset 0 0 0 2px rgba(255,255,255,0.14), inset 0 0 30px rgba(0,0,0,0.4);
+          radial-gradient(circle at 35% 30%, rgba(255,255,255,0.92), rgba(236,230,219,0.82) 10%, rgba(193,170,136,0.7) 22%, rgba(17,21,28,0.94) 63%, rgba(0,0,0,1) 100%);
+        box-shadow: inset 0 0 0 3px rgba(255,255,255,0.14), inset 0 0 30px rgba(0,0,0,0.5);
         overflow: hidden;
       }
 
-      .watch-face::before {
+      .dial::before {
         content: "";
         position: absolute;
-        inset: 16px;
+        inset: 18px;
         border-radius: 50%;
         border: 2px solid rgba(255,255,255,0.15);
       }
 
-      .watch-face::after {
+      .dial::after {
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(120deg, rgba(255,255,255,0.18), transparent 20%, transparent 72%, rgba(255,255,255,0.15));
+        background: linear-gradient(120deg, rgba(255,255,255,0.16), transparent 22%, transparent 76%, rgba(255,255,255,0.12));
       }
 
       .marker {
         position: absolute;
-        top: 10%;
+        top: 9%;
         left: 50%;
         width: 4px;
         height: 18px;
-        border-radius: 10px;
-        background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(156,126,81,0.8));
-        transform-origin: center 150px;
-        box-shadow: 0 0 8px rgba(255,255,255,0.2);
+        border-radius: 999px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(149,118,74,0.8));
+        transform-origin: center 160px;
+        box-shadow: 0 0 8px rgba(255,255,255,0.16);
       }
 
       .marker:nth-child(1) { transform: translateX(-50%) rotate(0deg); }
@@ -241,8 +272,8 @@
         height: 18px;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        background: radial-gradient(circle, #f7e7b6, #bf8c43);
-        box-shadow: 0 0 0 4px rgba(15,18,24,0.75);
+        background: radial-gradient(circle, #f7e7b6, #bd8d45);
+        box-shadow: 0 0 0 4px rgba(15,18,24,0.78);
       }
 
       .hand {
@@ -251,28 +282,27 @@
         bottom: 50%;
         transform-origin: center bottom;
         border-radius: 999px;
-        box-shadow: 0 0 14px rgba(255,255,255,0.12);
       }
 
       .hour {
-        width: 8px;
-        height: 90px;
-        background: linear-gradient(180deg, rgba(10,14,18,1), rgba(203,157,82,1) 46%, rgba(247,232,182,1));
-        transform: translateX(-50%) rotate(40deg);
+        width: 9px;
+        height: 94px;
+        background: linear-gradient(180deg, rgba(9,13,18,1), rgba(202,159,85,1) 48%, rgba(247,232,182,1));
+        transform: translateX(-50%) rotate(38deg);
       }
 
       .minute {
         width: 6px;
         height: 124px;
-        background: linear-gradient(180deg, rgba(10,14,18,1), rgba(218,184,114,1) 40%, rgba(246,231,177,1));
-        transform: translateX(-50%) rotate(120deg);
+        background: linear-gradient(180deg, rgba(9,13,18,1), rgba(218,183,110,1) 42%, rgba(246,232,180,1));
+        transform: translateX(-50%) rotate(122deg);
       }
 
       .second {
         width: 2px;
-        height: 138px;
-        background: linear-gradient(180deg, #f9d68d, #fff7d9);
-        transform: translateX(-50%) rotate(210deg);
+        height: 140px;
+        background: linear-gradient(180deg, #f4d179, #fff4d1);
+        transform: translateX(-50%) rotate(220deg);
       }
 
       .center-cap {
@@ -283,49 +313,30 @@
         height: 18px;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        background: radial-gradient(circle, #f7e4ab, #b4803b);
+        background: radial-gradient(circle, #f7e4ab, #b8843a);
         box-shadow: 0 0 0 4px rgba(11,15,19,0.8);
       }
 
       .watch-shadow {
         position: absolute;
-        width: 540px;
+        width: 670px;
         height: 120px;
         bottom: 8%;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 50%;
-        background: radial-gradient(ellipse, rgba(0,0,0,0.6), transparent 70%);
-        filter: blur(18px);
+        background: radial-gradient(ellipse, rgba(0,0,0,0.72), transparent 70%);
+        filter: blur(16px);
       }
-
-      .floating-tag {
-        position: absolute;
-        padding: 10px 14px;
-        border-radius: 999px;
-        border: 1px solid rgba(247,223,157,0.18);
-        background: rgba(10,14,18,0.72);
-        color: var(--gold-1);
-        font-size: 0.65rem;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        box-shadow: 0 16px 30px rgba(0,0,0,0.28);
-        animation: drift 7s ease-in-out infinite;
-      }
-
-      .tag-1 { top: 11%; left: 14%; }
-      .tag-2 { top: 22%; right: 10%; animation-delay: 1s; }
-      .tag-3 { bottom: 18%; left: 18%; animation-delay: 2s; }
-      .tag-4 { bottom: 12%; right: 17%; animation-delay: 2.5s; }
 
       @keyframes pulse {
-        0%, 100% { transform: scale(0.92); opacity: 0.75; }
+        0%, 100% { transform: scale(0.92); opacity: 0.76; }
         50% { transform: scale(1.08); opacity: 1; }
       }
 
       @keyframes floatWatch {
         0%, 100% {
-          transform: translateY(0) rotateZ(-6deg);
+          transform: translateY(0px) rotateZ(-6deg);
         }
         50% {
           transform: translateY(-22px) rotateZ(4deg);
@@ -337,52 +348,46 @@
         50% { transform: translateY(-14px); }
       }
 
-      @media (max-width: 700px) {
+      @media (max-width: 800px) {
         .watch {
-          width: 360px;
-          height: 360px;
-        }
-
-        .watch-band {
-          width: 130px;
-          height: 170px;
-        }
-
-        .watch-case {
-          inset: 48px 36px;
+          width: 420px;
+          height: 420px;
         }
 
         .brand {
-          letter-spacing: 0.6rem;
-          font-size: 0.62rem;
+          letter-spacing: 0.9rem;
+          font-size: 0.68rem;
         }
 
-        .floating-tag {
-          font-size: 0.52rem;
-          letter-spacing: 0.12em;
-          padding: 8px 10px;
+        .band {
+          width: 128px;
+          height: 190px;
+        }
+
+        .watch-case {
+          inset: 58px 42px;
         }
       }
     </style>
   </head>
   <body>
     <div class="scene">
-      <div class="watch-wrap">
+      <div class="watch-stage">
         <div class="brand">Rolex</div>
 
-        <div class="floating-tag tag-1">Swiss Made</div>
-        <div class="floating-tag tag-2">Waterproof</div>
-        <div class="floating-tag tag-3">Chronograph</div>
-        <div class="floating-tag tag-4">Gold</div>
+        <div class="float-tag tag-1">Swiss Made</div>
+        <div class="float-tag tag-2">Waterproof</div>
+        <div class="float-tag tag-3">Chronograph</div>
+        <div class="float-tag tag-4">Gold</div>
 
         <div class="watch">
           <div class="watch-shell">
-            <div class="watch-band top"></div>
-            <div class="watch-band bottom"></div>
+            <div class="band top"></div>
+            <div class="band bottom"></div>
 
             <div class="watch-case">
               <div class="bezel-ring"></div>
-              <div class="watch-face">
+              <div class="dial">
                 <div class="marker"></div>
                 <div class="marker"></div>
                 <div class="marker"></div>
