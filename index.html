@@ -3,20 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Discover the AUREL No. 01, a modern automatic watch concept with a midnight-blue dial, considered design, and refined details.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="description" content="Meet the AUREL No. 01, a modern automatic watch concept with a midnight-blue dial, considered design, and refined details made for the moments that matter.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="keywords" content="AUREL watch, automatic watch, luxury watch concept, design watch, modern wristwatch, midnight blue dial">
+  <meta name="author" content="AUREL Watches">
   <meta name="theme-color" content="#10100e">
-  <link rel="canonical" href="https://alibaba40chorhtmlgitigiti.vercel.app/">
-  <title>AUREL No. 01 | Modern Automatic Watch Concept</title>
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="AUREL Watches">
   <meta property="og:title" content="AUREL No. 01 | Modern Automatic Watch Concept">
   <meta property="og:description" content="A considered expression of time. Discover the AUREL No. 01, a modern automatic watch concept shaped by clarity, craft, and thoughtful details.">
   <meta property="og:url" content="https://alibaba40chorhtmlgitigiti.vercel.app/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://alibaba40chorhtmlgitigiti.vercel.app/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AUREL No. 01 | Modern Automatic Watch Concept">
   <meta name="twitter:description" content="A considered expression of time. Discover the AUREL No. 01, a modern automatic watch concept shaped by clarity, craft, and thoughtful details.">
+  <meta name="twitter:image" content="https://alibaba40chorhtmlgitigiti.vercel.app/og-image.jpg">
+  <link rel="canonical" href="https://alibaba40chorhtmlgitigiti.vercel.app/">
+  <title>AUREL No. 01 | Modern Automatic Watch Concept</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,7 +30,13 @@
     "name": "AUREL No. 01 Automatic Watch",
     "description": "A modern automatic watch concept with a midnight-blue dial, refined case, and considered design.",
     "brand": { "@type": "Brand", "name": "AUREL" },
-    "category": "Wristwatch"
+    "category": "Wristwatch",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "0",
+      "availability": "https://schema.org/PreOrder"
+    }
   }
   </script>
   <style>
@@ -50,22 +62,17 @@
     .skip-link:focus { top: 1rem; }
     .wrap { width: min(calc(100% - 48px), var(--wrap)); margin-inline: auto; }
     .site-header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid var(--line); background: rgba(16, 16, 14, .92); backdrop-filter: blur(16px); }
-    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .wordmark { font-family: var(--serif); font-size: 1.23rem; letter-spacing: .28em; text-decoration: none; white-space: nowrap; }
-    .nav-links { display: flex; align-items: center; gap: 32px; }
-    .nav-links a { color: var(--muted); font-size: .77rem; letter-spacing: .12em; text-decoration: none; transition: color .2s; }
-    .nav-links a:hover { color: var(--ink); }
+    .navbar { min-height: 74px; }
+    .navbar-brand { font-family: var(--serif); font-size: 1.23rem; letter-spacing: .28em; text-decoration: none; white-space: nowrap; color: var(--ink); }
+    .navbar-brand:hover { color: var(--ink); }
+    .navbar-nav { gap: 1.4rem; }
+    .nav-link { color: var(--muted); font-size: .77rem; letter-spacing: .12em; text-transform: none; text-decoration: none; transition: color .2s; }
+    .nav-link:hover, .nav-link:focus { color: var(--ink); }
     .nav-cta, .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: 0 22px; border: 1px solid var(--gold); color: var(--ink); font-size: .73rem; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; transition: background .2s, color .2s; }
     .nav-cta:hover, .button:hover { background: var(--gold); color: #171510; }
-    .menu-toggle { display: none; width: 44px; height: 44px; padding: 10px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
-    .menu-icon, .menu-icon::before, .menu-icon::after { display: block; width: 22px; height: 2px; background: currentColor; transition: transform .2s, top .2s, opacity .2s; }
-    .menu-icon { position: relative; margin: auto; }
-    .menu-icon::before, .menu-icon::after { position: absolute; left: 0; content: ''; }
-    .menu-icon::before { top: -7px; }
-    .menu-icon::after { top: 7px; }
-    .menu-toggle[aria-expanded="true"] .menu-icon { background: transparent; }
-    .menu-toggle[aria-expanded="true"] .menu-icon::before { top: 0; transform: rotate(45deg); }
-    .menu-toggle[aria-expanded="true"] .menu-icon::after { top: 0; transform: rotate(-45deg); }
+    .navbar-toggler { border: 1px solid var(--line); color: var(--ink); padding: .55rem .7rem; }
+    .navbar-toggler:focus { box-shadow: none; border-color: var(--gold); }
+    .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(243,240,233,1)' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
     .hero { position: relative; min-height: min(790px, calc(100svh - 74px)); display: grid; align-items: center; overflow: hidden; border-bottom: 1px solid var(--line); }
     .hero::before { position: absolute; top: 50%; right: -4%; width: min(78vw, 780px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(210,179,117,.13), transparent 68%); content: ''; transform: translateY(-50%); }
     .hero-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 30px; padding-block: 70px; }
@@ -125,15 +132,14 @@
     .delay-1 { transition-delay: .12s; }
     .delay-2 { transition-delay: .24s; }
     @keyframes watchFloat { 0%,100% { transform: translateY(0) rotate(-12deg); } 50% { transform: translateY(-13px) rotate(-9deg); } }
-    @media (max-width: 760px) {
+    @media (max-width: 767.98px) {
       .wrap { width: min(calc(100% - 36px),var(--wrap)); }
-      .nav { min-height: 64px; }
-      .menu-toggle { display: block; }
+      .navbar { min-height: 64px; }
+      .navbar-collapse { background: rgba(16, 16, 14, .98); border-top: 1px solid var(--line); margin-top: .5rem; padding: .5rem .25rem 1rem; }
+      .navbar-nav { gap: 0; }
+      .nav-link { display: block; padding: .9rem 0; border-bottom: 1px solid var(--line); }
+      .nav-link:last-child { border-bottom: 0; }
       .nav-cta { display: none; }
-      .nav-links { position: absolute; top: 100%; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 18px 18px; border-bottom: 1px solid var(--line); background: #10100e; }
-      .js .nav-links.open { display: flex; flex-direction: column; }
-      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: .8rem; }
-      .nav-links a:last-child { border-bottom: 0; }
       .hero { min-height: auto; }
       .hero-grid { grid-template-columns: 1fr; gap: 0; padding-block: 70px 35px; }
       .hero-content { position: relative; z-index: 1; }
@@ -160,17 +166,19 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <nav class="nav wrap" aria-label="Main navigation">
-      <a class="wordmark" href="#top" aria-label="AUREL home">AUREL</a>
-      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-links" aria-expanded="false">
-        <span class="menu-icon" aria-hidden="true"></span>
+    <nav class="navbar navbar-expand-md navbar-dark wrap" aria-label="Main navigation">
+      <a class="navbar-brand" href="#top" aria-label="AUREL home">AUREL</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="nav-links" id="primary-links">
-        <a href="#craft">The craft</a>
-        <a href="#details">Details</a>
-        <a href="#discover">Discover No. 01</a>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-md-center">
+          <li class="nav-item"><a class="nav-link" href="#craft">The craft</a></li>
+          <li class="nav-item"><a class="nav-link" href="#details">Details</a></li>
+          <li class="nav-item"><a class="nav-link" href="#discover">Discover No. 01</a></li>
+        </ul>
       </div>
-      <a class="nav-cta" href="#discover">Discover No. 01</a>
+      <a class="nav-cta ms-3 d-none d-md-inline-flex" href="#discover">Discover No. 01</a>
     </nav>
   </header>
   <main id="main">
@@ -207,30 +215,6 @@
   </main>
   <footer><div class="footer-inner wrap"><a class="wordmark" href="#top" aria-label="AUREL home">AUREL</a><p>© <span id="year">2026</span> AUREL Watches. An independent design concept.</p><a href="#main">Back to top</a></div></footer>
   <script>
-    const menuButton = document.querySelector('.menu-toggle');
-    const menu = document.getElementById('primary-links');
-    document.documentElement.classList.add('js');
-
-    function setMenuOpen(isOpen) {
-      menuButton.setAttribute('aria-expanded', String(isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-      menu.classList.toggle('open', isOpen);
-    }
-
-    menuButton.addEventListener('click', () => {
-      setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
-    });
-    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-        setMenuOpen(false);
-        menuButton.focus();
-      }
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 760) setMenuOpen(false);
-    });
-
     const revealItems = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       const observer = new IntersectionObserver((entries, currentObserver) => {
